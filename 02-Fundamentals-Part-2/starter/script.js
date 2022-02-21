@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 Coding Challenge #1
@@ -172,26 +172,27 @@ length of the array (because that's the number of elements)
 
 const bills = [10, 100, 1000, 22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
-const calcTip = amount => amount >= 50 && amount <= 300 ? amount * .15 : amount * .2;
+const calcTip = (amount) =>
+  amount >= 50 && amount <= 300 ? amount * 0.15 : amount * 0.2;
 
 const tips = [];
 const totals = [];
 
 for (let i = 0; i < bills.length; i++) {
-    const bill = bills[i];
-    const tip = calcTip(bill);
-    tips.push(tip);
-    totals.push(bill + tip);
+  const bill = bills[i];
+  const tip = calcTip(bill);
+  tips.push(tip);
+  totals.push(bill + tip);
 }
 
 const calcAverage = function (arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        const value = arr[i];
-        sum += value;
-        // console.log(sum)
-    }
-    return sum / arr.length;
-}
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    const value = arr[i];
+    sum += value;
+    // console.log(sum)
+  }
+  return sum / arr.length;
+};
 
 console.log(calcAverage(totals));
